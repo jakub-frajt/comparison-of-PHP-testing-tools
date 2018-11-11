@@ -1,4 +1,4 @@
-<?php /** @noinspection NotOptimalRegularExpressionsInspection */
+<?php
 
 declare(strict_types=1);
 
