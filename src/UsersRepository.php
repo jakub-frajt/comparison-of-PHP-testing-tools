@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\PhpUnit;
+namespace App;
 
 use App\PhpUnit\DTO\User;
 use Doctrine\DBAL\Connection;

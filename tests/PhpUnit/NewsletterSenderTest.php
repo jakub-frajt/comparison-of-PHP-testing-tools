@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace App\Tests\PhpUnit;
 
-use App\PhpUnit\DTO\User;
-use App\PhpUnit\MailerInterface;
-use App\PhpUnit\NewsletterSender;
-use App\PhpUnit\UsersRepository;
+use App\DTO\User;
+use App\MailerInterface;
+use App\NewsletterSender;
+use App\UsersRepository;
 use PHPUnit\Framework\TestCase;
 
 class NewsletterSenderTest extends TestCase

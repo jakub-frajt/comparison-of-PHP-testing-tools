@@ -1,6 +1,6 @@
 <?php
 
-namespace App\PhpUnit;
+namespace App;
 
 interface MailerInterface
 {
