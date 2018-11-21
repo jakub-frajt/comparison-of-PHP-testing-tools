@@ -1,0 +1,13 @@
+namespace: App\Tests\Codeception
+suites:
+    unit:
+        path: .
+
+settings:
+    shuffle: true
+    lint: true
+paths:
+    tests: tests/Codeception
+    output: tests/Codeception/_output
+    support: tests/Codeception/_support
+    data: tests/Codeception
