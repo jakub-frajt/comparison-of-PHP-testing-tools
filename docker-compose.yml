@@ -1,0 +1,31 @@
+version: '3.5'
+services:
+  php:
+    build:
+      context: .
+    ports:
+      - "0.0.0.0:80:80"
+    volumes:
+      - .:/var/www/html
+    container_name: apache_local
+
+  # database for tests
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: testdb
+    ports:
+      - "3306:3306"
+    container_name: mysql_local
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    container_name: adminer_local
+
+
+
+
