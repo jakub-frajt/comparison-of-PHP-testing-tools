@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace App\Tests\Mockery;
 
 use App\DTO\User;
-use App\MailerInterface;
-use App\NewsletterSender;
-use App\UsersRepository;
+use App\Mailing\MailerInterface;
+use App\Mailing\NewsletterSender;
+use App\Repository\UsersRepository;
 use Mockery as m;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 

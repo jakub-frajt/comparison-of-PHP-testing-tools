@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App;
+namespace App\Mailing;
+
+use App\Repository\UsersRepository;
 
 class NewsletterSender
 {

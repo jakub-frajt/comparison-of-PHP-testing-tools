@@ -6,7 +6,7 @@ namespace App\Tests\Codeception\Integration;
 use App\DTO\UserData;
 use App\Tests\Codeception\DbalConnection;
 use App\Tests\Codeception\UnitWithDbalConnection;
-use App\UsersRepository;
+use App\Repository\UsersRepository;
 
 class saveNewUserTest extends UnitWithDbalConnection
 {

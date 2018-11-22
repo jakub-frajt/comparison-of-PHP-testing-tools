@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App;
+namespace App\Repository;
 
 use App\DTO\User;
 use App\DTO\UserData;

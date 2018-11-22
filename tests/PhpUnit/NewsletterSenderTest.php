@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace App\Tests\PhpUnit;
 
 use App\DTO\User;
-use App\MailerInterface;
-use App\NewsletterSender;
-use App\UsersRepository;
+use App\Mailing\MailerInterface;
+use App\Mailing\NewsletterSender;
+use App\Repository\UsersRepository;
 use PHPUnit\Framework\TestCase;
 
 class NewsletterSenderTest extends TestCase

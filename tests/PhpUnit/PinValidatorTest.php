@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use App\PinValidator;
+use App\Validator\PinValidator;
 use PHPUnit\Framework\TestCase;
 
 class PinValidatorTest extends TestCase
