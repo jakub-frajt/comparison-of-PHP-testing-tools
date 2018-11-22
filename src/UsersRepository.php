@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace App;
 
-use App\PhpUnit\DTO\User;
+use App\DTO\User;
+use App\DTO\UserData;
 use Doctrine\DBAL\Connection;
 
 class UsersRepository
@@ -50,5 +51,23 @@ class UsersRepository
                 (bool) $data['active']
             );
         }, $usersData);
+    }
+
+    /**
+     * @param UserData $userData
+     *
+     * @throws \Doctrine\DBAL\DBALException
+     */
+    public function save(UserData $userData): void
+    {
+        $this->connection->insert('users', [
+            'active'     => $userData->isActive(),
+            'first_name' => $userData->getFirstName(),
+            'last_name'  => $userData->getLastName(),
+            'email'      => $userData->getEmail(),
+            'created'    => date('Y-m-d')
+        ], [
+            'active' => \PDO::PARAM_INT
+        ]);
     }
 }

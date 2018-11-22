@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\Codeception;
+namespace App\Tests\Codeception\Unit;
 
 use App\DTO\User;
 use App\MailerInterface;

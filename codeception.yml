@@ -11,3 +11,13 @@ paths:
     output: tests/Codeception/_output
     support: tests/Codeception/_support
     data: tests/Codeception
+modules:
+    enabled:
+        - Db:
+              dsn: 'mysql:host=mysql;dbname=testdb'
+              user: 'root'
+              password: 'root'
+              dump: 'tests/Codeception/_data/dump.sql'
+              populate: true
+              cleanup: true
+              reconnect: true
