@@ -1,8 +1,6 @@
 FROM php:7.2.3-apache-stretch
 
-ENV APACHE_DOCUMENTROOT /var/www/html
-
-RUN docker-php-ext-install pdo_mysql
+RUN a2enmod rewrite && docker-php-ext-install pdo_mysql
 
 # setting timezone
 RUN echo "date.timezone = Europe/Prague" > /usr/local/etc/php/php.ini
