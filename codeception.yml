@@ -1,7 +1,17 @@
 namespace: App\Tests\Codeception
 suites:
     unit:
-        path: .
+        path: ./Unit
+    integration:
+        path: ./Integration
+    acceptance:
+        path: ./Acceptance
+        actor: AcceptanceTester
+        modules:
+            enabled:
+                - PhpBrowser:
+                    url: http://localhost/public
+                - \App\Tests\Codeception\Helper\Acceptance
 
 settings:
     shuffle: true
@@ -13,11 +23,11 @@ paths:
     data: tests/Codeception
 modules:
     enabled:
-        - Db:
-              dsn: 'mysql:host=mysql;dbname=testdb'
-              user: 'root'
-              password: 'root'
-              dump: 'tests/Codeception/_data/dump.sql'
-              populate: true
-              cleanup: true
-              reconnect: true
+    - Db:
+        dsn: 'mysql:host=mysql;dbname=testdb'
+        user: 'root'
+        password: 'root'
+        dump: 'tests/Codeception/_data/dump.sql'
+        populate: true
+        cleanup: true
+        reconnect: true
