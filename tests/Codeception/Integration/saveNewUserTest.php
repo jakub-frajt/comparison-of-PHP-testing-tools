@@ -13,7 +13,11 @@ class saveNewUserTest extends UnitWithDbalConnection
 
     public function testSaveNewNotActiveUser(): void
     {
-        $userData = new UserData('Jan', 'Novák', 'novak@example.com');
+        $userData = new UserData();
+        $userData
+            ->setFirstName('Jan')
+            ->setLastName('Novák')
+            ->setEmail('novak@example.com');
         $usersRepository = new UsersRepository($this->getDbalConnection());
         $usersRepository->save($userData);
 
@@ -29,7 +33,11 @@ class saveNewUserTest extends UnitWithDbalConnection
 
     public function testSaveNewActiveUser(): void
     {
-        $userData = new UserData('Jan', 'Novák', 'novak@example.com');
+        $userData = new UserData();
+        $userData
+            ->setFirstName('Jan')
+            ->setLastName('Novák')
+            ->setEmail('novak@example.com');
         $userData->setActive();
         $usersRepository = new UsersRepository($this->getDbalConnection());
         $usersRepository->save($userData);

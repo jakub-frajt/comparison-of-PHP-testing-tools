@@ -27,14 +27,38 @@ class UserData
 
     /**
      * @param string $firstName
-     * @param string $lastName
-     * @param string $email
+     *
+     * @return UserData
      */
-    public function __construct(string $firstName, string $lastName, string $email)
+    public function setFirstName(string $firstName): UserData
     {
         $this->firstName = $firstName;
-        $this->lastName  = $lastName;
-        $this->email     = $email;
+
+        return $this;
+    }
+
+    /**
+     * @param string $lastName
+     *
+     * @return UserData
+     */
+    public function setLastName(string $lastName): UserData
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $email
+     *
+     * @return UserData
+     */
+    public function setEmail(string $email): UserData
+    {
+        $this->email = $email;
+
+        return $this;
     }
 
     /**
