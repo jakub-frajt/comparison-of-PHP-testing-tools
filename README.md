@@ -1,22 +1,20 @@
+## Requirements
+* Linux, tested on Ubuntu 18.10.
+* Docker (>= 18.09) and Docker Compose (>= 1.23.1)
+
+## Setup
+For running tests in PHP, we need to setup Apache server with PHP, MySQL for an integration and acceptance tests.
+So after clone or download this repository, run a bash script *setup.sh* that handle installation of dependencies and set up a server with MySQL:
+
+```bash
+    ./setup.sh
+```
+
 ## Running tests
-
-Each test can be run inside a Docker container with PHP.
-
-Install dependecies via Composer container:
+After that we can run tests for a specific testing tool:
 
 ```bash
-    docker run --rm -it -v $PWD:/app -u (id -u):(id -g) composer install
+    ./run_tests.sh phpunit
 ```
 
-We just need to specify our code as a volume for the Docker container
-
-```bash
-    docker run -it --volume=<project_dir>:/usr/src/ --rm php:7.2-cli bash
-```
-
-Inside the docker container we can run PHPUnit or another testing tool:
-
-```bash
-    cd /usr/src
-    php ./vendor/phpunit
-```
+Currently supported options/tools are *phpunit*, *mockery*, *codeception*
